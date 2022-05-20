@@ -51,7 +51,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 200px;
+    padding: 40px 200px;
     font-size: 18px;
     color: #E5E7EB;
 }
@@ -81,12 +81,11 @@ ul {
 }
 
 .image-placeholder{
-    background-color: gray;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 215px;
-    width: 450px;
+    height: auto;
+    width: auto;
 }
 
 .information{
@@ -183,4 +182,21 @@ ul {
     font-size: 18px;
     color: #E5E7EB;
     text-align: center;
+}
+
+#sushi-chef-image{
+    width: 450px;
+    height: auto;
+    border-radius: 7px;
+}
+
+.caption{
+    font-size: 12px;
+    text-align: center;
+}
+
+.menu-image{
+    width: 166px;
+    height: 166px;
+    border-radius: 5px;
 }
