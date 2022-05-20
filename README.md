@@ -1,3 +1,3 @@
 # restaurant-page
 
-Restaurant page created with HTML, CSS and JS. 
+Restaurant page created with HTML, CSS and JS and webpack.
