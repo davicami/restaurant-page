@@ -50,9 +50,11 @@ function createMain() {
     main.classList.add("main");
 
     // temporarily here
-    const home = createHome();
-    main.appendChild(home);
+    //const home = createHome();
+    //main.appendChild(home);
 
+    const menu = createMenu();
+    main.appendChild(menu);
     return main;
 }
 
@@ -110,5 +112,50 @@ function createFooter(){
    return footer;
 }
 
+function createMenu() {
+    const menu = document.createElement("div");
+    menu.classList.add("information");
+
+    const menuTitle = document.createElement("h2");
+    menuTitle.classList.add("information-header");
+    menuTitle.textContent = "Menu";
+
+
+    // list of dishes 
+    const menuList = document.createElement("div");
+    menuList.classList.add("information-list");
+
+    /*
+    <div class="information-item">
+        <div class="information-box">
+            <img class="menu-image" src="pexels-ryutaro-tsukata-6249497.jpg" alt="">
+        </div>
+        <div>Nigiri</div>
+    </div>
+    <div class="information-item">
+        <div class="information-box">
+            <img class="menu-image" src="pexels-pixabay-357756-maki.jpg" alt="">
+        </div>
+        <div>Futomaki</div>
+    </div>
+    */
+    const menuItem = document.createElement("div");
+    menuItem.classList.add("information-item");
+    const informationBox = document.createElement("div");
+    informationBox.classList.add("information-box");
+    const itemImage = document.createElement("img");
+    itemImage.classList.add("menu-image");
+    itemImage.src = "pexels-ryutaro-tsukata-6249497.jpg";
+
+    informationBox.appendChild(itemImage);
+    menuItem.appendChild(informationBox);
+    menuList.appendChild(menuItem);
+
+
+    menu.appendChild(menuTitle);
+    menu.appendChild(menuList);
+
+    return menu;
+}
 
 initializeWebsite();
