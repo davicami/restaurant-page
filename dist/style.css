@@ -45,6 +45,10 @@ ul {
     color: #E5E7EB;
 }
 
+.nav-list > li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 .hero{
     background-color: #1F2937;
