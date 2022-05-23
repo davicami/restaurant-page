@@ -70,7 +70,7 @@ function createHome() {
     heroParagraph.textContent = "We offer the best sushi in a wonderful location.  Our chef will surprise you with delicious and creative recipes.";
     heroLeft.appendChild(heroMainText);
     heroLeft.appendChild(heroParagraph);
-    
+
     const heroRight = document.createElement("div");
     heroRight.classList.add("hero-right");
     const chefImage = document.createElement("img");
@@ -95,21 +95,21 @@ function loadHome() {
     main.appendChild(createHome());
 }
 
-function createFooter(){
+function createFooter() {
     /*
     <div class="footer">
         <p>Copyright © Dave </p>
     </div>
     */
-   const footer = document.createElement("div");
-   footer.classList.add("footer");
+    const footer = document.createElement("div");
+    footer.classList.add("footer");
 
-   const footerParagraph = document.createElement("p");
-   footerParagraph.textContent = "Copyright © Dave";
+    const footerParagraph = document.createElement("p");
+    footerParagraph.textContent = "Copyright © Dave";
 
-   footer.appendChild(footerParagraph);
+    footer.appendChild(footerParagraph);
 
-   return footer;
+    return footer;
 }
 
 function createMenu() {
@@ -120,42 +120,40 @@ function createMenu() {
     menuTitle.classList.add("information-header");
     menuTitle.textContent = "Menu";
 
-
     // list of dishes 
     const menuList = document.createElement("div");
     menuList.classList.add("information-list");
 
-    /*
-    <div class="information-item">
-        <div class="information-box">
-            <img class="menu-image" src="pexels-ryutaro-tsukata-6249497.jpg" alt="">
-        </div>
-        <div>Nigiri</div>
-    </div>
-    <div class="information-item">
-        <div class="information-box">
-            <img class="menu-image" src="pexels-pixabay-357756-maki.jpg" alt="">
-        </div>
-        <div>Futomaki</div>
-    </div>
-    */
+    menuList.appendChild(createMenuItem("Nigiri", "pexels-ryutaro-tsukata-6249497.jpg"));
+    menuList.appendChild(createMenuItem("Futomaki", "pexels-pixabay-357756-maki.jpg"));
+    menuList.appendChild(createMenuItem("Uramaki","pexels-önder-örtel-7248797.jpg" ));
+    menuList.appendChild(createMenuItem("Temaki","pexels-temaki-12032535.jpg"));
+    menuList.appendChild(createMenuItem("Tempura","pexels-tempura-3622477.jpg"));
+    menuList.appendChild(createMenuItem("Yaki Soba","pexels-yaki-soba-4518700.jpg"));
+    menuList.appendChild(createMenuItem("Mochi", "pexels-mochi-8963453.jpg"));
+
+    menu.appendChild(menuTitle);
+    menu.appendChild(menuList);
+
+    return menu;
+}
+
+function createMenuItem(name, image){
     const menuItem = document.createElement("div");
     menuItem.classList.add("information-item");
     const informationBox = document.createElement("div");
     informationBox.classList.add("information-box");
     const itemImage = document.createElement("img");
     itemImage.classList.add("menu-image");
-    itemImage.src = "pexels-ryutaro-tsukata-6249497.jpg";
+    itemImage.src = image;
+    const itemName = document.createElement("div");
+    itemName.textContent = name;
 
     informationBox.appendChild(itemImage);
     menuItem.appendChild(informationBox);
-    menuList.appendChild(menuItem);
-
-
-    menu.appendChild(menuTitle);
-    menu.appendChild(menuList);
-
-    return menu;
+    menuItem.appendChild(itemName);
+    
+    return menuItem;
 }
 
 initializeWebsite();
