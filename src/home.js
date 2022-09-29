@@ -6,7 +6,7 @@ function createHome() {
     const heroLeft = document.createElement("div");
     heroLeft.classList.add("hero-left");
     const heroMainText = document.createElement("h1");
-    heroMainText.textContent = "Awsome sushi";
+    heroMainText.textContent = "Awsome sushi restaurant";
     const heroParagraph = document.createElement("p");
     heroParagraph.textContent = "We offer the best sushi in a wonderful location.  Our chef will surprise you with delicious and creative recipes.";
     heroLeft.appendChild(heroMainText);
